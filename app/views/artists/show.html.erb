@@ -1,0 +1,9 @@
+<h3><%= @artist.name %></h3>
+<p><strong>Age: </strong><%= @artist.age.to_s %></p>
+<p><strong>Title: </strong><%= @artist.title %></p>
+<h4>Instruments Played:</h4>
+<ul>
+  <% @artist.instruments.each do |i| %>
+    <li><%= link_to i.name, instrument_path(i) %> / <%= i.classification %></li>
+  <% end %>
+</ul>

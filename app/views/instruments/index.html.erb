@@ -1,0 +1,7 @@
+<h3>All Instruments</h3>
+<ul>
+  <% @instruments.each do |i| %>
+    <li><strong><%= link_to i.name, instrument_path(i) %></strong> - <%= i.classification %></li>
+  <% end %>
+</ul>
+<%= link_to 'Associate Instrument with Artist', new_artist_instrument_path %>
